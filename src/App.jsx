@@ -1,7 +1,7 @@
 import './App.css';
 import PokemonList from './components/PokemonList';
 import ScoreBoard from './components/ScoreBoard';
-import {useState } from 'react';
+import { useState } from 'react';
 
 
 function App() {
@@ -25,8 +25,16 @@ function App() {
 
   return (
     <>
-      <ScoreBoard currentScore={selectedPokemons.length} highScore={highScore}/>
-      <PokemonList currentScore={selectedPokemons.length} handleClick={handleClick}/>
+      <header>
+        <div className="left">
+          <h1>Pokemon Memory Game</h1>
+          <p>Click on unique pokémon to accumulate score. Duplicates will reset your progress.</p>
+        </div>
+        <ScoreBoard currentScore={selectedPokemons.length} highScore={highScore}/>
+      </header>
+      <main>
+        <PokemonList currentScore={selectedPokemons.length} handleClick={handleClick}/>
+      </main>
     </>
   );
 }
