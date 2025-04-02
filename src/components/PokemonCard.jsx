@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function PokemonCard({index}) {
+function PokemonCard({index, handleClick}) {
     const [pokemon, setPokemon] = useState({});
     
     useEffect(() => {
@@ -18,10 +18,10 @@ function PokemonCard({index}) {
 
 
     return (
-        <div className="pokemon" id={pokemon.id}>
+        <button className="pokemon" id={pokemon.id} onClick={handleClick}>
             <img src={pokemon.imgUrl} alt="" />
             <h2>{pokemon.name}</h2>
-        </div>
+        </button>
     );
 }
 
