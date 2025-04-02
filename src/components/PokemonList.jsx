@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import PokemonCard from "./PokemonCard";
 
 export default function PokemonList({currentScore, handleClick}) {
-    const [indexOrder, setIndexOrder] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    const [indexOrder, setIndexOrder] = useState([10, 2, 6, 8, 5, 3, 12, 4, 9, 1, 11, 7]);
   
     useEffect(() => {
       setIndexOrder(indexOrder => indexOrder.sort(() => 0.5 - Math.random()))
